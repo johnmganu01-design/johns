@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's | Style in Elegance</title>
+    <meta name="description" content="John's Clothing Boutique — premium fashion with elegance and style.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f5efe9;
+            --panel: #fffdfb;
+            --panel-soft: #f2e9e2;
+            --gold: #b88f5d;
+            --gold-deep: #8d6a3b;
+            --ink: #1f1c1a;
+            --muted: #5c514d;
+            --shadow: 0 16px 30px rgba(38, 24, 18, 0.12);
+            --rose: #d9c5b8;
+            --dark: #1e1a18;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: linear-gradient(180deg, #f9f3ee 0%, #f2eae2 100%);
+            color: var(--ink);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .page-shell {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 24px 18px 80px;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 0 24px;
+            flex-wrap: wrap;
+        }
+
+        .brand-block {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-mark {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: var(--shadow);
+        }
+
+        .brand-copy {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(2rem, 2vw, 2.7rem);
+            line-height: 1;
+            letter-spacing: 0.04em;
+            font-weight: 700;
+        }
+
+        .brand-tag {
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 22px;
+            font-size: 0.88rem;
+            color: var(--muted);
+            flex-wrap: wrap;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 30px;
+            padding: 34px 0 50px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--gold-deep);
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .hero h1,
+        .section-heading h2,
+        .story-text h2 {
+            margin: 0 0 18px;
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 600;
+            line-height: 0.95;
+            letter-spacing: 0.02em;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 5vw, 5.2rem);
+            max-width: 640px;
+        }
+
+        .hero-text {
+            max-width: 580px;
+            font-size: 1.04rem;
+            line-height: 1.75;
+            color: var(--muted);
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 18px;
+            margin-top: 26px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 999px;
+            padding: 0.9rem 1.55rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+            color: white;
+            box-shadow: 0 18px 30px rgba(158, 123, 80, 0.22);
+        }
+
+        .btn-secondary {
+            background: #f6eee9;
+            border: 1px solid rgba(153, 120, 88, 0.2);
+            color: var(--ink);
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 560px;
+        }
+
+        .visual-card.large {
+            position: absolute;
+            inset: 0 30px 50px 70px;
+            border-radius: 30px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #c4a98d, #f0d7c3, #d3b299);
+            box-shadow: var(--shadow);
+        }
+
+        .fashion-model {
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 50% 22%, rgba(255,255,255,0.8), rgba(255,255,255,0) 20%),
+                linear-gradient(135deg, rgba(36, 26, 23, 0.1), rgba(36, 26, 23, 0.5)),
+                url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=80") center/cover no-repeat;
+            filter: saturate(0.92);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            z-index: 2;
+            background: rgba(255,255,255,0.7);
+            color: var(--ink);
+            border: 1px solid rgba(0,0,0,0.05);
+            padding: 0.55rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .mini-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.76);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0,0,0,0.04);
+            border-radius: 18px;
+            padding: 16px 18px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow);
+        }
+
+        .mini-card span {
+            color: var(--muted);
+            font-size: 0.78rem;
+            margin-bottom: 6px;
+        }
+
+        .mini-card strong {
+            font-size: 1.05rem;
+        }
+
+        .mini-one {
+            right: 0;
+            bottom: 90px;
+        }
+
+        .mini-two {
+            left: 0;
+            bottom: 0;
+        }
+
+        .login-section,
+        .shop-section,
+        .story-section,
+        .dashboard-section,
+        .customer-area {
+            padding-top: 50px;
+        }
+
+        .section-heading {
+            margin-bottom: 24px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2.4rem, 4vw, 3.5rem);
+        }
+
+        .auth-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 30px;
+        }
+
+        .auth-card {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(94, 73, 63, 0.08);
+            box-shadow: var(--shadow);
+            border-radius: 28px;
+            padding: 28px 24px;
+        }
+
+        .auth-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.8rem;
+            font-family: "Cormorant Garamond", serif;
+        }
+
+        .auth-card p {
+            margin: 0 0 20px;
+            color: var(--muted);
+        }
+
+        .auth-form {
+            display: grid;
+            gap: 18px;
+        }
+
+        .auth-form label {
+            display: grid;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .auth-form input {
+            width: 100%;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 14px;
+            padding: 0.9rem 1rem;
+            background: rgba(255,255,255,0.7);
+            font: inherit;
+            color: var(--ink);
+        }
+
+        .auth-form input:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255,255,255,0.9);
+        }
+
+        .otp-box {
+            display: grid;
+            gap: 18px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .product-card {
+            background: rgba(255,255,255,0.6);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .product-image {
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image-one {
+            background-image: url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80");
+        }
+        .image-two {
+            background-image: url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80");
+        }
+        .image-three {
+            background-image: url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80");
+        }
+        .image-four {
+            background-image: url("https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80");
+        }
+
+        .product-info {
+            padding: 18px 18px 22px;
+        }
+
+        .product-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-bottom: 10px;
+        }
+
+        .product-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .product-header span {
+            color: var(--gold-deep);
+            font-weight: 700;
+        }
+
+        .product-info p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+
+        .story-section {
+            display: grid;
+            grid-template-columns: 1fr 0.9fr;
+            gap: 36px;
+            align-items: center;
+        }
+
+        .story-text p {
+            color: var(--muted);
+            line-height: 1.9;
+            font-size: 1.02rem;
+            margin: 0 0 16px;
+        }
+
+        .story-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .story-portrait {
+            position: relative;
+            background: #f2e9e3;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .story-portrait img {
+            width: 100%;
+            height: 620px;
+            object-fit: cover;
+        }
+
+        .portrait-caption {
+            position: absolute;
+            left: 18px;
+            right: 18px;
+            bottom: 18px;
+            background: rgba(255,255,255,0.72);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            padding: 14px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .portrait-caption strong {
+            font-size: 1.1rem;
+        }
+
+        .portrait-caption span {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 28px;
+        }
+
+        .dashboard-panel {
+            background: rgba(255,255,255,0.55);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 22px;
+            padding: 22px;
+            box-shadow: var(--shadow);
+        }
+
+        .dashboard-panel h3 {
+            margin: 0 0 18px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 2rem;
+        }
+
+        .list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 14px;
+        }
+
+        .list li {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 14px 12px;
+            border-radius: 14px;
+            background: rgba(242, 236, 233, 0.8);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .order-item {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            padding: 12px 10px;
+            border-radius: 16px;
+            background: rgba(242, 236, 233, 0.75);
+            margin-bottom: 14px;
+        }
+
+        .thumb {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+        }
+
+        .thumb-one {
+            background-image: url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=500&q=80");
+        }
+        .thumb-two {
+            background-image: url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=500&q=80");
+        }
+
+        .order-copy {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .order-copy strong {
+            color: var(--ink);
+        }
+
+        .customer-products {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .customer-product {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            background: rgba(255,255,255,0.55);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 22px;
+            padding: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .mini-art {
+            width: 120px;
+            height: 120px;
+            border-radius: 18px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+        }
+
+        .art-one {
+            background-image: url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80");
+        }
+        .art-two {
+            background-image: url("https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80");
+        }
+
+        .customer-product h4 {
+            margin: 0 0 8px;
+            font-size: 1.2rem;
+        }
+
+        .customer-product p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+
+        .success-message {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            color: #2e7d32;
+            padding: 16px 18px;
+            border-radius: 14px;
+            margin-bottom: 18px;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        @media (max-width: 980px) {
+            .hero,
+            .story-section,
+            .dashboard-grid,
+            .auth-grid,
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .main-nav {
+                flex-wrap: wrap;
+            }
+
+            .hero-visual {
+                min-height: 420px;
+            }
+
+            .story-portrait img {
+                height: 520px;
+            }
+
+            .customer-products {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .page-shell {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .cta-row {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .main-nav {
+                gap: 10px 18px;
+                font-size: 0.8rem;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .auth-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .customer-product {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .mini-art {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand-block">
+                <div class="logo-mark">J</div>
+                <div class="brand-copy">
+                    <span class="brand-name">John's</span>
+                    <span class="brand-tag">Style in Elegance</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="#story">Our Story</a>
+                <a href="#shop">Shop</a>
+                <a href="#login">Access</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <p class="eyebrow">Premium fashion for every moment</p>
+                    <h1>Luxury, comfort, and confidence in every thread.</h1>
+                    <p class="hero-text">
+                        John's brings refined elegance to everyday style with timeless fits,
+                        rich textures, and curated looks designed for modern living.
+                    </p>
+                    <div class="cta-row">
+                        <a href="#shop" class="btn btn-primary">Shop Collection</a>
+                        <a href="#login" class="btn btn-secondary">Login</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-card large">
+                        <div class="product-badge">New Arrival</div>
+                        <div class="fashion-model"></div>
+                    </div>
+                    <div class="mini-card mini-one">
+                        <span>Tailored Styles</span>
+                        <strong>Signature edit</strong>
+                    </div>
+                    <div class="mini-card mini-two">
+                        <span>Premium Quality</span>
+                        <strong>Made to stand out</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="login-section" id="login">
+                <div class="section-heading">
+                    <p class="eyebrow">Access</p>
+                    <h2>Welcome to your space</h2>
+                </div>
+
+                <div class="auth-grid">
+                    <div class="auth-card admin-card">
+                        <h3>Store Owner</h3>
+                        <p>Login with your email and secure pin</p>
+
+                        <form id="adminLoginForm" class="auth-form">
+                            <label>
+                                Email
+                                <input type="email" id="adminEmail" value="owner@johns.co.za" required>
+                            </label>
+                            <label>
+                                Pin code
+                                <input type="password" id="adminPin" value="071121" required>
+                            </label>
+                            <button type="submit" class="btn btn-primary full-width">
+                                Enter Dashboard
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="auth-card customer-card">
+                        <h3>Customers</h3>
+                        <p>Use your Gmail and receive a code to continue</p>
+
+                        <form id="customerLoginForm" class="auth-form">
+                            <label>
+                                Gmail address
+                                <input type="email" id="customerEmail" placeholder="name@gmail.com" required>
+                            </label>
+                            <button type="button" id="sendCodeBtn" class="btn btn-secondary full-width">
+                                Send verification code
+                            </button>
+
+                            <div class="otp-box hidden" id="otpBox">
+                                <label>
+                                    Enter code
+                                    <input type="text" id="customerCode" maxlength="6" placeholder="123456" required>
+                                </label>
+                                <button type="submit" class="btn btn-primary full-width">
+                                    Continue shopping
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="shop-section" id="shop">
+                <div class="section-heading">
+                    <p class="eyebrow">Collection</p>
+                    <h2>Featured pieces</h2>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-image image-one"></div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3>Velvet Evening Set</h3>
+                                <span>R 1,850</span>
+                            </div>
+                            <p><strong>Colors:</strong> Midnight, Rose, Ivory</p>
+                            <p><strong>Sizes:</strong> S, M, L, XL</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image image-two"></div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3>Luxe Summer Dress</h3>
+                                <span>R 1,420</span>
+                            </div>
+                            <p><strong>Colors:</strong> Sand, Navy, Cocoa</p>
+                            <p><strong>Sizes:</strong> XS, S, M, L</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image image-three"></div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3>Signature Wool Coat</h3>
+                                <span>R 2,690</span>
+                            </div>
+                            <p><strong>Colors:</strong> Taupe, Black, Cream</p>
+                            <p><strong>Sizes:</strong> S, M, L, XL</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image image-four"></div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3>Modern Knit Layers</h3>
+                                <span>R 980</span>
+                            </div>
+                            <p><strong>Colors:</strong> Charcoal, Olive, Latte</p>
+                            <p><strong>Sizes:</strong> M, L, XL</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="story-section" id="story">
+                <div class="story-text">
+                    <p class="eyebrow">Our story</p>
+                    <h2>Born in Plettenberg Bay</h2>
+                    <p>
+                        John's officially launched in 2027 as a proudly local fashion brand created in Plettenberg Bay by Mandiluve Mganu in collaboration with other clothing business enterprises. The brand was founded on the belief that fashion should feel personal, refined, and empowering.
+                    </p>
+                    <p>
+                        From modest beginnings to a sought-after boutique identity, John's emerged as a celebration of elegance, craftsmanship, and community. Every collection reflects a fusion of premium style and culturally rooted artistry.
+                    </p>
+                </div>
+
+                <div class="story-portrait">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Mandiluve Mganu, Founder">
+                    <div class="portrait-caption">
+                        <strong>Mandiluve Mganu</strong>
+                        <span>Founder & Creative Director</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-section hidden" id="adminDashboard">
+                <div class="section-heading">
+                    <p class="eyebrow">Owner dashboard</p>
+                    <h2>Orders and customers</h2>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-panel">
+                        <h3>Customers</h3>
+                        <ul class="list">
+                            <li>
+                                <span>Amanda K.</span>
+                                <span>amanda@gmail.com</span>
+                            </li>
+                            <li>
+                                <span>Lerato S.</span>
+                                <span>lerato@gmail.com</span>
+                            </li>
+                            <li>
+                                <span>Zanele M.</span>
+                                <span>zanele@gmail.com</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dashboard-panel">
+                        <h3>Orders</h3>
+                        <div class="order-item">
+                            <div class="thumb thumb-one"></div>
+                            <div class="order-copy">
+                                <strong>Velvet Evening Set</strong>
+                                <span>Colour: Rose</span>
+                                <span>Size: M</span>
+                                <span>Qty: 2</span>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="thumb thumb-two"></div>
+                            <div class="order-copy">
+                                <strong>Signature Wool Coat</strong>
+                                <span>Colour: Black</span>
+                                <span>Size: L</span>
+                                <span>Qty: 1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="customer-area hidden" id="customerArea">
+                <div class="section-heading">
+                    <p class="eyebrow">Customer area</p>
+                    <h2>Your products and order preview</h2>
+                </div>
+
+                <div class="success-message" id="successMsg">
+                    ✓ Order confirmation email sent to your Gmail. Expected delivery: 5-7 business days.
+                </div>
+
+                <div class="customer-products">
+                    <div class="customer-product">
+                        <div class="mini-art art-one"></div>
+                        <div>
+                            <h4>Velvet Evening Set</h4>
+                            <p><strong>R 1,850</strong></p>
+                            <p><strong>Available Colours:</strong> Midnight, Rose, Ivory</p>
+                            <p><strong>Available Sizes:</strong> S, M, L, XL</p>
+                        </div>
+                    </div>
+
+                    <div class="customer-product">
+                        <div class="mini-art art-two"></div>
+                        <div>
+                            <h4>Modern Knit Layers</h4>
+                            <p><strong>R 980</strong></p>
+                            <p><strong>Available Colours:</strong> Charcoal, Olive, Latte</p>
+                            <p><strong>Available Sizes:</strong> M, L, XL</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const adminLoginForm = document.getElementById("adminLoginForm");
+        const customerLoginForm = document.getElementById("customerLoginForm");
+        const sendCodeBtn = document.getElementById("sendCodeBtn");
+        const otpBox = document.getElementById("otpBox");
+        const adminDashboard = document.getElementById("adminDashboard");
+        const customerArea = document.getElementById("customerArea");
+        const successMsg = document.getElementById("successMsg");
+
+        const ADMIN_EMAIL = "owner@johns.co.za";
+        const ADMIN_PIN = "071121";
+
+        adminLoginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById("adminEmail").value.trim();
+            const pin = document.getElementById("adminPin").value.trim();
+
+            if (email === ADMIN_EMAIL && pin === ADMIN_PIN) {
+                adminDashboard.classList.remove("hidden");
+                customerArea.classList.add("hidden");
+                window.scrollTo({ top: adminDashboard.offsetTop - 20, behavior: "smooth" });
+                alert("✓ Welcome, owner. Dashboard unlocked.");
+            } else {
+                alert("✗ Invalid email or pin code. Please try again.");
+            }
+        });
+
+        sendCodeBtn.addEventListener("click", function () {
+            const email = document.getElementById("customerEmail").value.trim();
+
+            if (!email) {
+                alert("Please enter a Gmail address.");
+                return;
+            }
+
+            if (!email.endsWith("@gmail.com")) {
+                alert("Please enter a valid Gmail address.");
+                return;
+            }
+
+            const code = Math.floor(100000 + Math.random() * 900000).toString();
+            localStorage.setItem("johns_customer_code", code);
+            localStorage.setItem("johns_customer_email", email);
+            
+            alert(`✓ Verification code sent to ${email}\n\nCode: ${code}`);
+            otpBox.classList.remove("hidden");
+        });
+
+        customerLoginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById("customerEmail").value.trim();
+            const inputCode = document.getElementById("customerCode").value.trim();
+            const sentCode = localStorage.getItem("johns_customer_code");
+
+            if (!email || !email.endsWith("@gmail.com")) {
+                alert("Please enter a valid Gmail address.");
+                return;
+            }
+
+            if (!inputCode) {
+                alert("Please enter the verification code.");
+                return;
+            }
+
+            if (!sentCode) {
+                alert("Please request a verification code first.");
+                return;
+            }
+
+            if (inputCode === sentCode) {
+                customerArea.classList.remove("hidden");
+                adminDashboard.classList.add("hidden");
+                successMsg.classList.add("show");
+                window.scrollTo({ top: customerArea.offsetTop - 20, behavior: "smooth" });
+                alert("✓ Welcome! You are now logged in.\n\nOrder confirmation email sent to " + email);
+            } else {
+                alert("✗ Incorrect code. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
